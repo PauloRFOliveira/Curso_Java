@@ -2,5 +2,29 @@ package oo.heranca;
 
 public class Heroi extends Jogador
 {
+    Heroi(int x, int y)
+    {
+        super(x, y);
+    }
 
+    boolean atacar(Jogador oponente)
+    {
+        int deltaX = Math.abs(x - oponente.x);
+        int deltaY = Math.abs(y - oponente.y);
+
+        if (deltaY <= 1 && deltaX <= 1)
+        {
+            oponente.vida -= 20;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public String toString()
+    {
+        return "O herói têm " + vida + " pontos de vida.";
+    }
 }
