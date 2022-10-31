@@ -2,7 +2,7 @@ package oo.heranca.desafio;
 
 public class Uno extends Carro
 {
-    Uno(String modelo, int velocidadeMaxima, int delta)
+    public Uno(String modelo, int velocidadeMaxima, int delta)
     {
         super(modelo, velocidadeMaxima, delta);
     }
