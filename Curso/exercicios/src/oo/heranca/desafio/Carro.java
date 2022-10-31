@@ -2,30 +2,30 @@ package oo.heranca.desafio;
 
 public class Carro
 {
-    int velocidadeAtual;
-    final int velocidadeMaxima;
-    final int delta;
-    boolean ligado = false;
-    final String modelo;
+    public int velocidadeAtual;
+    public final int velocidadeMaxima;
+    private final int delta;
+    public boolean ligado = false;
+    public final String modelo;
 
-    Carro(String modelo, int velocidadeMaxima, int delta)
+     protected Carro(String modelo, int velocidadeMaxima, int delta)
     {
         this.modelo = modelo;
         this.velocidadeMaxima = velocidadeMaxima;
         this.delta = delta;
     }
 
-    void ligar()
+    public void ligar()
     {
         ligado = true;
     }
 
-    void desligar()
+    public void desligar()
     {
         ligado = false;
     }
 
-    void acelerar()
+    public void acelerar()
     {
         if (ligado)
         {
@@ -40,7 +40,7 @@ public class Carro
         }
     }
 
-    void frear()
+    public void frear()
     {
         if (velocidadeAtual - delta < 0)
         {

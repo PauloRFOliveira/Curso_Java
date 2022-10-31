@@ -1,6 +1,6 @@
 package oo.heranca;
 
-public enum Direcao
+enum Direcao
 {
     NORTE, LESTE, SUL, OESTE;
 }

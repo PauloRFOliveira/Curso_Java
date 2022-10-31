@@ -4,15 +4,15 @@ public class Jogador
 {
     int x;
     int y;
-    int vida = 100;
+    public int vida = 100;
 
-    Jogador(int x, int y)
+    protected Jogador(int x, int y)
     {
         this.x = x;
         this.y = y;
     }
 
-    void andar(Direcao direcao)
+    public void andar(Direcao direcao)
     {
         if (this.podeAndar(direcao))
         {
@@ -33,7 +33,7 @@ public class Jogador
         }
     }
 
-    boolean podeAndar(Direcao direcao)
+    private boolean podeAndar(Direcao direcao)
     {
         if (direcao == Direcao.NORTE && y < 100)
         {
@@ -57,7 +57,7 @@ public class Jogador
         }
     }
 
-    boolean atacar(Jogador oponente)
+    public boolean atacar(Jogador oponente)
     {
         int deltaX = Math.abs(x - oponente.x);
         int deltaY = Math.abs(y - oponente.y);
